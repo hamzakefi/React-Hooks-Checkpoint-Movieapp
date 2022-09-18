@@ -3,8 +3,8 @@ import { Card } from 'react-bootstrap'
 import MovieRating from './Rating'
 const Moviecard = ({Movie}) => {
   return (
-    <div >
-       <Card style={{ width: '18rem' }}>
+    <div className='card'>
+       <Card style={{  width: '18rem' }}>
       <Card.Img variant="top" src={Movie.posterUrl} />
       <Card.Body>
         <Card.Title> {Movie.title}    </Card.Title>

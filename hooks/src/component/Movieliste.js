@@ -2,11 +2,13 @@ import React from 'react'
 import Moviecard from './Moviecard'
 import '../component/Movielist.css'
 import { moviesData } from './Data/Data'
-const Movieliste = ({Movies,inputSerch} ) => {
+
+const Movieliste = ({Movies,inputSerch,Rating} ) => {
   return (
     <div className='Movielist'>
     {    Movies
-    .filter(Movie => Movie.title.toUpperCase().includes(inputSerch.toUpperCase())  ) 
+    .filter(Movie => Movie.title.toUpperCase().includes(inputSerch.toUpperCase())   &&  Movie.rate >=Rating)
+   
     .map(Movie => < Moviecard Movie={Movie} key={Movie.id} /> ) }
     </div>
   )

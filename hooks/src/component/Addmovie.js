@@ -39,10 +39,10 @@ handleClose ()
  
  return (
 
-    <div>
+    <div className=''>
       
       
-       <Button variant="primary" onClick={handleShow}>
+       <Button className='Button' variant="primary" onClick={handleShow}>
     Add Movie
   </Button>
 

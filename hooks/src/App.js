@@ -7,6 +7,7 @@ import Addmovie from './component/Addmovie';
 import Moviefilter from './component/Moviefilter';
 import Movieliste from './component/Movieliste';
 import { moviesData } from './component/Data/Data';
+import FilterByrate from './component/Rating'
 
 
 
@@ -17,15 +18,20 @@ const [inputSerch,SetinputSerch]=useState("")
   SetMovies([...Movies,Newmovie])
  
 }
+const [Rating, setRating] = useState(0)
 
 
 
   return (
     <div className="App">
+      
+     <nav> 
+      <Moviefilter  inputSerch={inputSerch} SetinputSerch={SetinputSerch}  />
+      </nav>
+      <FilterByrate ismovieRating={false} rating={Rating} setRating={setRating} />
      
-      <Moviefilter inputSerch={inputSerch} SetinputSerch={SetinputSerch} />
-      < Movieliste Movies={Movies}   inputSerch={inputSerch} SetinputSerch={SetinputSerch}  />
-      <Addmovie Add={Add} />
+      < Movieliste Movies={Movies}   inputSerch={inputSerch} SetinputSerch={SetinputSerch} Rating={Rating} />
+    <footer className='footer'>  <Addmovie Add={Add} /> </footer>
     
    
     </div>
