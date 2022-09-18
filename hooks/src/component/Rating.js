@@ -1,7 +1,7 @@
 import { Rate } from 'antd';
 import 'antd/dist/antd.css';
 
-import React, { useState } from 'react';
+
 const desc = ['terrible', 'bad', 'normal', 'good', 'wonderful'];
 
 const Rating = ({ rating ,setRating,movieRating,ismovieRating }) => {
