@@ -1,7 +1,7 @@
 import React from 'react'
 import Moviecard from './Moviecard'
 import '../component/Movielist.css'
-import { moviesData } from './Data/Data'
+
 
 const Movieliste = ({Movies,inputSerch,Rating} ) => {
   return (
